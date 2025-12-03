@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "files": [
+    "src/**/*.{js,ts,jsx,tsx,css,scss,json,html}"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "formatter": {
+    "indentStyle": "space",
+    "indentSize": 2
+  }
+}
