@@ -1,14 +1,11 @@
 {
-  "root": true,
-  "files": [
-    "src/**/*.{js,ts,jsx,tsx,css,scss,json,html}"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "formatter": {
-    "indentStyle": "space",
-    "indentSize": 2
-  }
+	"vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+	"root": true,
+	"files": ["src/**/*.{ts,tsx,css,scss,html}"],
+	"exclude": ["node_modules", "dist", "*.json", "tsconfig*"],
+	"formatter": {
+		"indentStyle": "space",
+		"indentSize": 2
+	},
+	"organizeImports": { "enabled": true }
 }
