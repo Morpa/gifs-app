@@ -1,3 +1,5 @@
+import type { KeyboardEvent } from "react";
+
 interface Props {
 	title: string;
 	searches: string[];
@@ -5,6 +7,15 @@ interface Props {
 }
 
 export const PreviousSearches = ({ title, searches, onTermClick }: Props) => {
+	const handleSearchOnEnter = (
+		event: KeyboardEvent<HTMLLIElement>,
+		search: string,
+	) => {
+		if (event.key === "Enter" || event.key === " ") {
+			onTermClick(search);
+		}
+	};
+
 	return (
 		<div className="previous-searches">
 			<h2>{title}</h2>
@@ -13,11 +24,7 @@ export const PreviousSearches = ({ title, searches, onTermClick }: Props) => {
 					<li
 						key={search}
 						onClick={() => onTermClick(search)}
-						onKeyDown={(e) => {
-							if (e.key === "Enter" || e.key === " ") {
-								onTermClick(search);
-							}
-						}}
+						onKeyDown={(event) => handleSearchOnEnter(event, search)}
 					>
 						{search}
 					</li>

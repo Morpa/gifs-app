@@ -9,7 +9,11 @@ export const GifsApp = () => {
 	const [previousTerms, setPreviousTerms] = useState(["goku"]);
 
 	const handleTermClick = (term: string) => {
-		console.log(term);
+		console.log({ term });
+	};
+
+	const handleSearch = (query: string) => {
+		console.log({ query });
 	};
 
 	return (
@@ -19,7 +23,11 @@ export const GifsApp = () => {
 				description="Encontre os melhores gifs aqui"
 			/>
 
-			<SeachBar placeholder="Procurar gifs" buttonText="Buscar" />
+			<SeachBar
+				placeholder="Procurar gifs"
+				buttonText="Buscar"
+				onQuery={handleSearch}
+			/>
 
 			<PreviousSearches
 				title="Pesquisas anteriores"
