@@ -1,7 +1,7 @@
 {
 	"vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
 	"root": true,
-	"files": ["src/**/*.{ts,tsx,css,scss,html}"],
+	"files": ["src/**/*.{ts,tsx,css,scss,html, test.ts,test.tsx}"],
 	"exclude": ["node_modules", "dist", "*.json", "tsconfig*", "dist"],
 	"formatter": {
 		"indentStyle": "space",
