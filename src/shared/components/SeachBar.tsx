@@ -1,4 +1,3 @@
-import { on } from "events";
 import { useEffect, useState, type KeyboardEvent } from "react";
 
 interface Props {
